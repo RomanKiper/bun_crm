@@ -1,3 +1,49 @@
 body {
-    background: red;
+    background: #D3D3D3;
+}
+
+aside {
+    float: left;
+    background: #000000;
+    width: 15%;
+    padding: 1.5%;
+    height: 100vh;
+    color: #FFFFFF;
+    border-right: 5px solid #696969;
+}
+
+aside img {
+    position: relative;
+    top: 20px;
+    width: 80%;
+    float: right;
+}
+aside .logo {
+    font-size: 30px;
+    margin-left: 15px;
+    font-weight: bolt;
+    position: relative;
+    left: 20px;
+}
+aside .logo:hover {
+    color: #FF0000;
+}
+aside ul {
+    list-style: none;
+}
+aside ul li {
+    color: #FFFFFF;
+    display: block;
+    margin-top: 30px;
+    position: relative;
+    top: 50px;
+    transition: all .3s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: #FF0000;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+aside ul a {
+    color: #FFFFFF;
 }
