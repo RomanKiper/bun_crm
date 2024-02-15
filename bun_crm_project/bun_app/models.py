@@ -38,6 +38,9 @@ class Client(models.Model):
     date_created = models.DateTimeField(default=now, verbose_name="дата создания")
     is_published = models.BooleanField(verbose_name='опубликовано', default=True)
 
+    def __str__(self):
+        return self.name
+
 
     class Meta:
         verbose_name_plural = 'клиент'
@@ -70,6 +73,9 @@ class Advertising(models.Model):
     class Meta:
         verbose_name_plural = 'вид рекламы'
         verbose_name = 'виды реклам'
+
+    def __str__(self):
+        return self.title
 
 
 class AdvertisingCategory(models.Model):

@@ -17,22 +17,34 @@
 
 </head>
 <body>
-    <aside>
-        <span class="logo">Bun project</span>
-        <img src="{% static 'bun_app/img/bun_logo2.png' %}" alt="">
-        <ul>
-            <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="{% url 'home' %}">О нас</a></li>
-            <li><a href="">Реклама</a></li>
-            <li><a href="">Конструктор</a></li>
-            <li><a href="">Готовые шаблоны</a></li>
-            <li><a href="">Контакты</a></li>
-            <li><a href="">Личный кабинет</a></li>
-        </ul>
-    </aside>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+    <div>
+        <header>
+            <div class="left-section_header">
+                <span class="logo">Bun project</span>
+            </div>
+            <div class="right-section">
+                <a href="#">Личный кабинет</a>
+                <a href="#">Вход</a>
+                <a href="{% url 'registration' %}">Регистрация</a>
+            </div>
+        </header>
+    </div>
+    <div>
+        <aside>
+            <img src="{% static 'bun_app/img/bun_logo2.png' %}" alt="">
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'about' %}">О нас</a></li>
+                <li><a href="">Реклама</a></li>
+                <li><a href="">Конструктор</a></li>
+                <li><a href="">Готовые шаблоны</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </aside>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
 </body>
 </html>

@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'bun_app/index.html')
+    data = {
+        'title': 'Главная страница '
+    }
+    return render(request, 'bun_app/index.html', data)
 
 
 def about(request):

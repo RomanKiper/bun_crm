@@ -1,7 +1,36 @@
 body {
-    background: #D3D3D3;
+    background: #2F4F4F;
 }
-
+header .right-section {
+    float: right;
+    position: relative;
+    right: 25px;
+    top: -30px;
+}
+header .right-section a:hover {
+    transform: scale(1.04);
+    color: #FF00FF;
+}
+    header .right-section a  {
+    margin-left: 30px;
+    color: #FFFFFF;
+}
+header {
+    float: top;
+    background: #000000;
+    height: 5%;
+    padding: 0.5%;
+    color: #FFFFFF;
+}
+header .logo:hover {
+    color: #FF00FF;
+}
+header .logo {
+    font-size: 25px;
+    font-weight: bolt;
+    position: relative;
+    left: 25px;
+}
 aside {
     float: left;
     background: #000000;
@@ -11,22 +40,11 @@ aside {
     color: #FFFFFF;
     border-right: 5px solid #696969;
 }
-
 aside img {
     position: relative;
-    top: 20px;
+    top: -22px;
     width: 80%;
     float: right;
-}
-aside .logo {
-    font-size: 30px;
-    margin-left: 15px;
-    font-weight: bolt;
-    position: relative;
-    left: 20px;
-}
-aside .logo:hover {
-    color: #FF0000;
 }
 aside ul {
     list-style: none;
@@ -34,16 +52,28 @@ aside ul {
 aside ul li {
     color: #FFFFFF;
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     position: relative;
-    top: 50px;
-    transition: all .3s ease;
+    top: 30px;
+    transition: transform .3s ease;
 }
 aside ul li:hover, aside ul a:hover {
-    color: #FF0000;
+    color: #FF00FF;
     text-decoration: none;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 aside ul a {
     color: #FFFFFF;
 }
+main .features {
+    float: left;
+    color: #FF00FF;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+main .features h1 {font-size: 50px}
+main .features p {max-width: 400px; margin: 20px auto}
+main {border-top: 5px solid #696969;}
+
+
