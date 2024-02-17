@@ -15,6 +15,12 @@ header .right-section a:hover {
     margin-left: 30px;
     color: #FFFFFF;
 }
+header right-section img {
+    position: relative;
+    top: -22px;
+    width: 5%;
+    float: right;
+}
 header {
     float: top;
     background: #000000;
@@ -39,12 +45,6 @@ aside {
     height: 100vh;
     color: #FFFFFF;
     border-right: 5px solid #696969;
-}
-aside img {
-    position: relative;
-    top: -22px;
-    width: 80%;
-    float: right;
 }
 aside ul {
     list-style: none;

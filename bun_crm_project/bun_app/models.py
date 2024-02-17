@@ -12,6 +12,8 @@ class CustomUser(AbstractUser):
 
     class Meta:
         db_table = "custom_user_table"
+        verbose_name_plural = 'пользователи'
+        verbose_name = 'пользователь'
 
 
 class Role(models.Model):
@@ -24,8 +26,8 @@ class Role(models.Model):
                             default='manager')
 
     class Meta:
-        verbose_name_plural = 'роль пользователя'
-        verbose_name = 'роль пользователя'
+        verbose_name_plural = 'роли'
+        verbose_name = 'роль'
 
     def __str__(self):
         return self.name
@@ -41,10 +43,9 @@ class Client(models.Model):
     def __str__(self):
         return self.name
 
-
     class Meta:
-        verbose_name_plural = 'клиент'
-        verbose_name = 'клиенты'
+        verbose_name_plural = 'клиенты'
+        verbose_name = 'клиент'
 
 
 class Commercial_offer(models.Model):
@@ -58,8 +59,8 @@ class Commercial_offer(models.Model):
     client = models.ForeignKey('Client', verbose_name='клиент', on_delete=models.PROTECT)
 
     class Meta:
-        verbose_name_plural = 'предложение'
-        verbose_name = 'предложения'
+        verbose_name_plural = 'коммерческие предложения'
+        verbose_name = 'коммерческое предложение'
 
 
 class Advertising(models.Model):
@@ -71,8 +72,8 @@ class Advertising(models.Model):
     category = models.ForeignKey('AdvertisingCategory', verbose_name='категория', on_delete=models.PROTECT)
 
     class Meta:
-        verbose_name_plural = 'вид рекламы'
-        verbose_name = 'виды реклам'
+        verbose_name_plural = 'виды рекламы'
+        verbose_name = 'вид рекламы'
 
     def __str__(self):
         return self.title
@@ -80,6 +81,10 @@ class Advertising(models.Model):
 
 class AdvertisingCategory(models.Model):
     name = models.CharField(max_length=64, verbose_name='категория')
+
+    class Meta:
+        verbose_name_plural = 'категрии рекламы'
+        verbose_name = 'категрия рекламы'
 
     def __str__(self):
         return self.name
