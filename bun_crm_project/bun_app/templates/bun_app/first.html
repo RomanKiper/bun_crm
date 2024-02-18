@@ -19,9 +19,15 @@
 <body>
     <div>
         <header>
-            <div class="left-section_header">
+            <div class="left-section">
                 <img src="{% static 'bun_app/img/bun_logo2.png' %}" alt="">
                 <span class="logo">Bun project</span>
+            </div>
+            <div class="central-section">
+                <a href="#">Главная</a>
+                <a href="#">О проекте</a>
+                <a href="#">Контакты</a>
+                <a href="#">Конструктор КП</a>
             </div>
             <div class="right-section">
                 <a href="#">Личный кабинет</a>
@@ -31,20 +37,15 @@
         </header>
     </div>
     <div>
-        <aside>
-            <ul>
-                <li><a href="{% url 'home' %}">Главная</a></li>
-                <li><a href="{% url 'about' %}">О нас</a></li>
-                <li><a href="">Реклама</a></li>
-                <li><a href="">Конструктор</a></li>
-                <li><a href="">Готовые шаблоны</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-        </aside>
         <main>
             {% block content %}
             {% endblock %}
         </main>
+    </div>
+    <div>
+        <footer>
+
+        </footer>
     </div>
 </body>
 </html>
