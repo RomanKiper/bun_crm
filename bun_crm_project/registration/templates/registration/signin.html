@@ -1,0 +1,25 @@
+{% extends 'bun_app/first.html' %}
+
+{% block title %}{{ signin }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ signin }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% csrf_token %}
+            <div class="control-group">
+                {{ form.username }}
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+                {{ form.password }}
+                <p class="help-block text-danger"></p>
+            </div>
+            <div>
+                <br>
+                <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Войти</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

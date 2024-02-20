@@ -21,18 +21,19 @@
         <header>
             <div class="left-section">
                 <img src="{% static 'bun_app/img/bun_logo2.png' %}" alt="">
-                <span class="logo">Bun project</span>
+                <span class="logo" >Bun project</span>
             </div>
             <div class="central-section">
-                <a href="#">Главная</a>
-                <a href="#">О проекте</a>
-                <a href="#">Контакты</a>
-                <a href="#">Конструктор КП</a>
+                <a href="{% url 'home' %}">Главная</a>
+                <a href="{% url 'about' %}">О проекте</a>
+                <a href="{% url 'contacts' %}">Контакты</a>
+                <a href="{% url 'constructor' %}">Конструктор КП</a>
             </div>
             <div class="right-section">
-                <a href="#">Личный кабинет</a>
-                <a href="#">Вход</a>
+                <a href="#">Выйти</a>
+                <a href="{% url 'signin' %}">Войти</a>
                 <a href="{% url 'registration' %}">Регистрация</a>
+                <a href="{% url 'user_account' %}">Личный кабинет</a>
             </div>
         </header>
     </div>

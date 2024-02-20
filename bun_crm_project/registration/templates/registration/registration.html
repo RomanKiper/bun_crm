@@ -4,9 +4,31 @@
 
 {% block content %}
     <div class="features">
+
         <h1>{{ registration_data }}</h1>
-        <p>Information Information Information Information Information Information Information
-        InformationInformationInformationInformationInformationInformation</p>
-        <button class="btn btn-danger">Just push</button>
+        <form method="post">
+            {% csrf_token %}
+
+             <div class="control-group">
+                 {{ form.username }}
+                 <p class="help-block text-danger"></p>
+             </div>
+             <div class="control-group">
+                 {{ form.email }}
+                 <p class="help-block text-danger"></p>
+             </div>
+             <div class="control-group">
+                 {{ form.password1 }}
+                 <p class="help-block text-danger"></p>
+             </div>
+             <div class="control-group">
+                 {{ form.password2 }}
+                 <p class="help-block text-danger"></p>
+             </div>
+             <div>
+                 <br>
+                 <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Зарегистрироваться</button>
+             </div>
+        </form>
     </div>
 {% endblock %}

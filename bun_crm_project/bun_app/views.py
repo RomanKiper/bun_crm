@@ -15,5 +15,13 @@ def about(request):
     return render(request, 'bun_app/about.html')
 
 
+def contacts(request):
+    return render(request, 'bun_app/contacts.html')
+
+
+def constructor(request):
+    return render(request, 'bun_app/constructor_offer.html')
+
+
 
 
