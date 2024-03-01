@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from bun_app.models import CustomUser
 from django.forms import CharField, TextInput, PasswordInput, EmailInput, EmailField
 
 
@@ -54,7 +55,7 @@ class RegisterForm(UserCreationForm):
 
     class Meta:
         fields = ('username', 'email', 'password1', 'password2')
-        model = User
+        model = CustomUser
 
 
 class Loginform(AuthenticationForm):
